@@ -1,0 +1,139 @@
+﻿@*@{
+    ViewBag.Title = "Демонстрационный пример решения задачи оптимизации сталеплавильной шихты";
+}
+<br />
+
+<link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+<script src="~/Scripts/js/bootstrap.js"></script>
+
+<div class="form-group">
+    <label style="font-size: 35px; margin-left: +500px; color: forestgreen" class="col-8">Исходные данные:</label>
+    <br />
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Компонент шихты</th>
+            <th scope="col">Si</th>
+            <th scope="col">Mn</th>
+            <th scope="col">Cr</th>
+            <th scope="col">Ni</th>
+            <th scope="col">Стоимость, у.е./т</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Чугун литейный хромоникелевый</th>
+            <td>2,95</td>
+            <td>0,55</td>
+            <td>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#form_calc').on('submit', function (e) {
+
+
+            var Si_InComponent_1 = parseFloat($('input[name="Si_InComponent_1"]').val().replace(/,/, '.'));
+            var Mn_InComponent_1 = parseFloat($('input[name="Mn_InComponent_1"]').val().replace(/,/, '.'));
+            var Cr_InComponent_1 = parseFloat($('input[name="Cr_InComponent_1"]').val().replace(/,/, '.'));
+            var Ni_InComponent_1 = parseFloat($('input[name="Ni_InComponent_1"]').val().replace(/,/, '.'));
+            var CostComponent_1 = parseFloat($('input[name="CostComponent_1"]').val().replace(/,/, '.'));
+
+            var Si_InComponent_2 = parseFloat($('input[name="Si_InComponent_2"]').val().replace(/,/, '.'));
+            var Mn_InComponent_2 = parseFloat($('input[name="Mn_InComponent_2"]').val().replace(/,/, '.'));
+            var Cr_InComponent_2 = parseFloat($('input[name="Cr_InComponent_2"]').val().replace(/,/, '.'));
+            var Ni_InComponent_2 = parseFloat($('input[name="Ni_InComponent_2"]').val().replace(/,/, '.'));
+            var CostComponent_2 = parseFloat($('input[name="CostComponent_2"]').val().replace(/,/, '.'));
+
+            var Si_InComponent_3 = parseFloat($('input[name="Si_InComponent_3"]').val().replace(/,/, '.'));
+            var Mn_InComponent_3 = parseFloat($('input[name="Mn_InComponent_3"]').val().replace(/,/, '.'));
+            var Cr_InComponent_3 = parseFloat($('input[name="Cr_InComponent_3"]').val().replace(/,/, '.'));
+            var Ni_InComponent_3 = parseFloat($('input[name="Ni_InComponent_3"]').val().replace(/,/, '.'));
+            var CostComponent_3 = parseFloat($('input[name="CostComponent_3"]').val().replace(/,/, '.'));
+
+            var Si_InComponent_4 = parseFloat($('input[name="Si_InComponent_4"]').val().replace(/,/, '.'));
+            var Mn_InComponent_4 = parseFloat($('input[name="Mn_InComponent_4"]').val().replace(/,/, '.'));
+            var Cr_InComponent_4 = parseFloat($('input[name="Cr_InComponent_4"]').val().replace(/,/, '.'));
+            var Ni_InComponent_4 = parseFloat($('input[name="Ni_InComponent_4"]').val().replace(/,/, '.'));
+            var CostComponent_4 = parseFloat($('input[name="CostComponent_4"]').val().replace(/,/, '.'));
+
+            var Si_InComponent_5 = parseFloat($('input[name="Si_InComponent_5"]').val().replace(/,/, '.'));
+            var Mn_InComponent_5 = parseFloat($('input[name="Mn_InComponent_5"]').val().replace(/,/, '.'));
+            var Cr_InComponent_5 = parseFloat($('input[name="Cr_InComponent_5"]').val().replace(/,/, '.'));
+            var Ni_InComponent_5 = parseFloat($('input[name="Ni_InComponent_5"]').val().replace(/,/, '.'));
+            var CostComponent_5 = parseFloat($('input[name="CostComponent_5"]').val().replace(/,/, '.'));
+
+            var Si_InComponent_6 = parseFloat($('input[name="Si_InComponent_6"]').val().replace(/,/, '.'));
+            var Mn_InComponent_6 = parseFloat($('input[name="Mn_InComponent_6"]').val().replace(/,/, '.'));
+            var Cr_InComponent_6 = parseFloat($('input[name="Cr_InComponent_6"]').val().replace(/,/, '.'));
+            var Ni_InComponent_6 = parseFloat($('input[name="Ni_InComponent_6"]').val().replace(/,/, '.'));
+            var CostComponent_6 = parseFloat($('input[name="CostComponent_6"]').val().replace(/,/, '.'));
+
+            var Si_InComponent_7 = parseFloat($('input[name="Si_InComponent_7"]').val().replace(/,/, '.'));
+            var Mn_InComponent_7 = parseFloat($('input[name="Mn_InComponent_7"]').val().replace(/,/, '.'));
+            var Cr_InComponent_7 = parseFloat($('input[name="Cr_InComponent_7"]').val().replace(/,/, '.'));
+            var Ni_InComponent_7 = parseFloat($('input[name="Ni_InComponent_7"]').val().replace(/,/, '.'));
+            var CostComponent_7 = parseFloat($('input[name="CostComponent_7"]').val().replace(/,/, '.'));
+
+
+            var ComponentMin_1 = parseFloat($('input[name="ComponentMin_1"]').val().replace(/,/, '.'));
+            var ComponentMax_1 = parseFloat($('input[name="ComponentMax_1"]').val().replace(/,/, '.'));
+
+            var ComponentMin_2 = parseFloat($('input[name="ComponentMin_2"]').val().replace(/,/, '.'));
+            var ComponentMax_2 = parseFloat($('input[name="ComponentMax_2"]').val().replace(/,/, '.'));
+
+            var ComponentMin_3 = parseFloat($('input[name="ComponentMin_3"]').val().replace(/,/, '.'));
+            var ComponentMax_3 = parseFloat($('input[name="ComponentMax_3"]').val().replace(/,/, '.'));
+
+            var ComponentMin_4 = parseFloat($('input[name="ComponentMin_4"]').val().replace(/,/, '.'));
+            var ComponentMax_4 = parseFloat($('input[name="ComponentMax_4"]').val().replace(/,/, '.'));
+
+            var ComponentMin_5 = parseFloat($('input[name="ComponentMin_5"]').val().replace(/,/, '.'));
+            var ComponentMax_5 = parseFloat($('input[name="ComponentMax_5"]').val().replace(/,/, '.'));
+
+            var ComponentMin_6 = parseFloat($('input[name="ComponentMin_6"]').val().replace(/,/, '.'));
+            var ComponentMax_6 = parseFloat($('input[name="ComponentMax_6"]').val().replace(/,/, '.'));
+
+            var ComponentMin_7 = parseFloat($('input[name="ComponentMin_7"]').val().replace(/,/, '.'));
+            var ComponentMax_7 = parseFloat($('input[name="ComponentMax_7"]').val().replace(/,/, '.'));
+
+
+            var Si_InShihtaNeed_Min = parseFloat($('input[name="Si_InShihtaNeed_Min"]').val().replace(/,/, '.'));
+            var Si_InShihtaNeed_Max = parseFloat($('input[name="Si_InShihtaNeed_Max"]').val().replace(/,/, '.'));
+
+            var Mn_InShihtaNeed_Min = parseFloat($('input[name="Mn_InShihtaNeed_Min"]').val().replace(/,/, '.'));
+            var Mn_InShihtaNeed_Max = parseFloat($('input[name="Mn_InShihtaNeed_Max"]').val().replace(/,/, '.'));
+
+            var Cr_InShihtaNeed_Min = parseFloat($('input[name="Cr_InShihtaNeed_Min"]').val().replace(/,/, '.'));
+            var Cr_InShihtaNeed_Max = parseFloat($('input[name="Cr_InShihtaNeed_Max"]').val().replace(/,/, '.'));
+
+            var Ni_InShihtaNeed_Min = parseFloat($('input[name="Ni_InShihtaNeed_Min"]').val().replace(/,/, '.'));
+            var Ni_InShihtaNeed_Max = parseFloat($('input[name="Ni_InShihtaNeed_Max"]').val().replace(/,/, '.'));
+
+
+            //if ((mass_suh < 1000) || (mass_suh > 100000)) {
+            //    alert("Ошибка! Масса сухового материала должна быть в пределах от 1000 до 100000 кг!");
+            //    return false;
+            //}
+            //if ((nach_vlaj < 0.1) || (nach_vlaj > 100)) {
+            //    alert("Ошибка! Начальная влажность форм должна быть в пределах от 0,1 до 100 %!");
+            //    return false;
+            //}
+            //if ((kone_vlaj < 0.1) || (kone_vlaj > 100)) {
+            //    alert("Ошибка! Конечная влажность форм должна быть в пределах от 0,1 до 100 %!");
+            //    return false;
+            //}
+
+        });
+
+    });
+
+</script>*@
+
+
+
